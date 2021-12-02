@@ -56,6 +56,14 @@ router.get('/docs/photooxy', (req, res) => {
  	res.sendFile(__path + '/api/photooxy.html')
 })
 
+router.get('/register', (req, res) => {
+ 	res.sendFile(__path + '/docs/register.html')
+})
+
+router.get('/login', (req, res) => {
+ 	res.sendFile(__path + '/docs/login.html')
+})
+
 router.get('/docs/search', (req, res) => {
 	res.sendFile(__path + '/api/search.html')
 })

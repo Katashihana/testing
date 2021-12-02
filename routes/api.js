@@ -7,7 +7,7 @@
 <p> Loli Killers</p>
 <p> Rynz</p>
 <p> Eka Danuarta</p>
-<p> ZeeoneOfc </p>
+<p> KatashiOfc </p>
 <p> Creative Time [ For Template ]</p>
 <p> ALL HUMAN</p>
 */
@@ -22,8 +22,8 @@ var lolkill = db.get("lolkill");
 	console.log('')
 }
 
-var creator = 'ZeeoneOfc' // ubah jadi nama lu
-const listkey = ["Alphabot","Zeeone","ZeeoneOfc"]; // ubah apikey nya, tambah aja klo mau
+var creator = 'Katashi' // ubah jadi nama lu
+const listkey = ["Katashi","KATASHI","katashi","putra","pipiw","avii","utaa"]; // ubah apikey nya, tambah aja klo mau
 
 var axios = require('axios');
 var qs = require('qs');
@@ -103,7 +103,7 @@ var len = 15
         apikeyInput  = req.query.apikeyInput,
         email = req.query.email;
 
-    if (!apikey) return res.sendFile(__path + '/docs/403.html')
+    if (!apikey) return res.sendFile(__path + '/docs/login.html')
     if (!(apikeyInput && email)) return res.json(loghandler.notAddApiKey)
     if (apikey != `${keyapi}`) return res.json(loghandler.invalidKey)
 
@@ -160,7 +160,7 @@ router.get('/cecan/china', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/china.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/china.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -181,7 +181,7 @@ router.get('/cecan/vietnam', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/vietnam.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/vietnam.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -202,7 +202,7 @@ router.get('/cecan/thailand', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/thailand.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/thailand.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -223,7 +223,7 @@ router.get('/cecan/indonesia', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/indonesia.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/indonesia.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -244,7 +244,7 @@ router.get('/cecan/korea', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/korea.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/korea.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -265,7 +265,7 @@ router.get('/cecan/japan', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/japan.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/japan.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -286,14 +286,14 @@ router.get('/cecan/malaysia', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.sendFile(__path + '/docs/403.html')
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/malaysia.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/malaysia.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
         var buff = result.url
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  buff
              })
          })
@@ -615,7 +615,7 @@ router.get('/download/ytsearch', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -638,7 +638,7 @@ router.get('/download/ytmp4', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -662,7 +662,7 @@ router.get('/lk21/search', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -684,7 +684,7 @@ router.get('/lk21/terbaru', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -706,7 +706,7 @@ router.get('/lk21/comingsoon', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -728,7 +728,7 @@ router.get('/lk21/tvseries', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -751,7 +751,7 @@ router.get('/lk21/year', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -774,7 +774,7 @@ router.get('/lk21/country', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -797,7 +797,7 @@ router.get('/lk21/genre', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -822,7 +822,7 @@ router.get('/filmapik/search', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -845,7 +845,7 @@ router.get('/filmapik/kategori', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -868,7 +868,7 @@ router.get('/filmapik/play', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -890,7 +890,7 @@ router.get('/filmapik/terbaru', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -915,7 +915,7 @@ router.get('/news/cnn', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -938,7 +938,7 @@ router.get('/news/cnbc', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -961,7 +961,7 @@ router.get('/news/republika', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -984,7 +984,7 @@ router.get('/news/tempo', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -1007,7 +1007,7 @@ router.get('/news/antara', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -1029,7 +1029,7 @@ router.get('/news/kumparan', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -2844,7 +2844,7 @@ router.get('/other/ghstalk', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
@@ -2867,7 +2867,7 @@ router.get('/other/repostalk', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Zeeone',
+             	author: 'Katashi',
                  result
              })
          })
