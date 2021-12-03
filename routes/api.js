@@ -44,6 +44,18 @@ var options = require(__path + '/lib/options.js');
 var { getBuffer } = require(__path + '/lib/function.js');
 
 var {
+  jalantikus,
+  turnbackhoax,
+  muihalal,
+  happymod,
+  apkmody,
+  moddroid,
+  servermc,
+  mcpedl,
+  pstore,
+} = require("./../lib/tod");
+
+var {
 	Vokal,
 	Base,
 	Searchnabi,
@@ -61,6 +73,24 @@ loghandler = {
         message: 'Service Unavaible, Sedang dalam perbaikan',
         maintanied_by: `${creator}`
     },
+    notquery: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukkan parameter query'
+        },
+    notpage: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukkan parameter page'
+        },
+        notproduk: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukkan parameter produk'
+        },
     notapikey: {
     	status: false,
     	code: 403,
@@ -103,7 +133,7 @@ var len = 15
         apikeyInput  = req.query.apikeyInput,
         email = req.query.email;
 
-    if (!apikey) return res.sendFile(__path + '/docs/login.html')
+    if (!apikey) return res.sendFile(__path + '/docs/register.html')
     if (!(apikeyInput && email)) return res.json(loghandler.notAddApiKey)
     if (apikey != `${keyapi}`) return res.json(loghandler.invalidKey)
 
@@ -3044,6 +3074,105 @@ router.get('/other/kodepos', async (req, res, next) => {
                  result
              })
          })
+         .catch(e => {
+         	console.log(e);
+         	res.sendFile(__path + '/docs/503.html')
+})
+} else {
+  res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get("/search/palingmurah", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const produk = req.query.query;
+  if(!produk) return res.json(loghandler.notproduk)
+  if(!apikey) return res.sendFile(__path + '/docs/403.html')
+  if(listkey.includes(apikey)){
+  palingmurah_(produk)
+    .then((data) => {
+      res.json(data)
+    })
+  })
+         .catch(e => {
+         	console.log(e);
+         	res.sendFile(__path + '/docs/503.html')
+})
+} else {
+  res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get("/search/pstore", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  const page = req.query.query;
+  if(!query) return res.json(loghandler.notquery)
+  if(!page) return res.json(loghandler.notpage)
+  if(!apikey) return res.sendFile(__path + '/docs/403.html')
+  if(listkey.includes(apikey)){
+  pstore(query, page)
+    .then((data) => {
+      res.json(data)
+    })
+  })
+         .catch(e => {
+         	console.log(e);
+         	res.sendFile(__path + '/docs/503.html')
+})
+} else {
+  res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get("/search/muihalal", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  const page = req.query.query;
+  if(!query) return res.json(loghandler.notquery)
+  if(!page) return res.json(loghandler.notpage)
+  if(!apikey) return res.sendFile(__path + '/docs/403.html')
+  if(listkey.includes(apikey)){
+  muihalal(query, page)
+    .then((data) => {
+      res.json(data)
+    })
+  })
+         .catch(e => {
+         	console.log(e);
+         	res.sendFile(__path + '/docs/503.html')
+})
+} else {
+  res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get("/search/jalantikus", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  if(!query) return res.json(loghandler.notquery)
+  if(!apikey) return res.sendFile(__path + '/docs/403.html')
+  if(listkey.includes(apikey)){
+  jalantikus(query)
+    .then((data) => {
+      res.json(data)
+    })
+  })
+         .catch(e => {
+         	console.log(e);
+         	res.sendFile(__path + '/docs/503.html')
+})
+} else {
+  res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get("/search/layarkaca", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const filem = req.query.query;
+  if(!filem) return res.json(loghandler.notquery)
+  if(!apikey) return res.sendFile(__path + '/docs/403.html')
+  if(listkey.includes(apikey)){
+  layarkaca_(pilem)
+    .then((data) => {
+      res.json(data)
+    })
+  })
          .catch(e => {
          	console.log(e);
          	res.sendFile(__path + '/docs/503.html')
