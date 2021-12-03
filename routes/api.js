@@ -14,6 +14,7 @@
 __path = process.cwd()
 
 var aexm = require('@lolikillers/aexm-api');
+var favicon = require('serve-favicon');
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
@@ -3085,7 +3086,7 @@ router.get('/other/kodepos', async (req, res, next) => {
 router.get("/search/palingmurah", async(req, res, next) => {
   const apikey = req.query.apikey;
   const produk = req.query.query;
-  if(!produk) return res.json(loghandler.notproduk)
+  if(!produk) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter produk"})
   if(!apikey) return res.sendFile(__path + '/docs/403.html')
   if(listkey.includes(apikey)){
   palingmurah_(produk)
@@ -3105,8 +3106,8 @@ router.get("/search/pstore", async(req, res, next) => {
   const apikey = req.query.apikey;
   const query = req.query.query;
   const page = req.query.query;
-  if(!query) return res.json(loghandler.notquery)
-  if(!page) return res.json(loghandler.notpage)
+  if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
+  if(!page) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter page"})
   if(!apikey) return res.sendFile(__path + '/docs/403.html')
   if(listkey.includes(apikey)){
   pstore(query, page)
@@ -3126,8 +3127,8 @@ router.get("/search/muihalal", async(req, res, next) => {
   const apikey = req.query.apikey;
   const query = req.query.query;
   const page = req.query.query;
-  if(!query) return res.json(loghandler.notquery)
-  if(!page) return res.json(loghandler.notpage)
+  if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
+  if(!page) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter page"})
   if(!apikey) return res.sendFile(__path + '/docs/403.html')
   if(listkey.includes(apikey)){
   muihalal(query, page)
@@ -3146,7 +3147,7 @@ router.get("/search/muihalal", async(req, res, next) => {
 router.get("/search/jalantikus", async(req, res, next) => {
   const apikey = req.query.apikey;
   const query = req.query.query;
-  if(!query) return res.json(loghandler.notquery)
+  if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
   if(!apikey) return res.sendFile(__path + '/docs/403.html')
   if(listkey.includes(apikey)){
   jalantikus(query)
@@ -3164,8 +3165,8 @@ router.get("/search/jalantikus", async(req, res, next) => {
 })
 router.get("/search/layarkaca", async(req, res, next) => {
   const apikey = req.query.apikey;
-  const filem = req.query.query;
-  if(!filem) return res.json(loghandler.notquery)
+  const film = req.query.query;
+  if(!film) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter film"})
   if(!apikey) return res.sendFile(__path + '/docs/403.html')
   if(listkey.includes(apikey)){
   layarkaca_(pilem)
