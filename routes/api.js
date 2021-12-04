@@ -188,7 +188,7 @@ res.send(JSON.parse(json))
 // cecan
 router.get('/cecan/china', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/china.json`))
         .then(response => response.json())
@@ -209,7 +209,7 @@ router.get('/cecan/china', async (req, res, next) => {
 })
 router.get('/cecan/vietnam', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/vietnam.json`))
         .then(response => response.json())
@@ -230,7 +230,7 @@ router.get('/cecan/vietnam', async (req, res, next) => {
 })
 router.get('/cecan/thailand', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/thailand.json`))
         .then(response => response.json())
@@ -251,7 +251,7 @@ router.get('/cecan/thailand', async (req, res, next) => {
 })
 router.get('/cecan/indonesia', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/indonesia.json`))
         .then(response => response.json())
@@ -272,7 +272,7 @@ router.get('/cecan/indonesia', async (req, res, next) => {
 })
 router.get('/cecan/korea', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/korea.json`))
         .then(response => response.json())
@@ -293,7 +293,7 @@ router.get('/cecan/korea', async (req, res, next) => {
 })
 router.get('/cecan/japan', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/japan.json`))
         .then(response => response.json())
@@ -314,7 +314,7 @@ router.get('/cecan/japan', async (req, res, next) => {
 })
 router.get('/cecan/malaysia', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Katashiofc/Asupan/main/cecan/malaysia.json`))
         .then(response => response.json())
@@ -339,7 +339,7 @@ router.get('/cecan/malaysia', async (req, res, next) => {
 // asupan
 router.get('/asupan/cecan', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/cecan.json`))
         .then(response => response.json())
@@ -360,7 +360,7 @@ router.get('/asupan/cecan', async (req, res, next) => {
 })
 router.get('/asupan/hijaber', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/hijaber.json`))
         .then(response => response.json())
@@ -381,7 +381,7 @@ router.get('/asupan/hijaber', async (req, res, next) => {
 })
 router.get('/asupan/asupan', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/asupan.js`))
         .then(response => response.json())
@@ -402,7 +402,7 @@ router.get('/asupan/asupan', async (req, res, next) => {
 })
 router.get('/asupan/rikagusriani', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/asupan/rikagusriani.json`))
         .then(response => response.json())
@@ -423,7 +423,7 @@ router.get('/asupan/rikagusriani', async (req, res, next) => {
 })
 router.get('/asupan/santuy', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/santuy.json`))
         .then(response => response.json())
@@ -444,7 +444,7 @@ router.get('/asupan/santuy', async (req, res, next) => {
 })
 router.get('/asupan/ukhty', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/ukhty.json`))
         .then(response => response.json())
@@ -465,7 +465,7 @@ router.get('/asupan/ukhty', async (req, res, next) => {
 })
 router.get('/asupan/bocil', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/bocil.json`))
         .then(response => response.json())
@@ -486,7 +486,7 @@ router.get('/asupan/bocil', async (req, res, next) => {
 })
 router.get('/asupan/gheayubi', async (req, res, next) => {
           var apikey = req.query.apikey
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/geayubi.json`))
         .then(response => response.json())
@@ -510,7 +510,7 @@ router.get('/asupan/gheayubi', async (req, res, next) => {
 router.get('/download/facebook', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.url
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://fb-api-zhirrr.vercel.app/?url=${url}`))
@@ -532,7 +532,7 @@ router.get('/download/facebook', async (req, res, next) => {
 router.get('/download/instagram', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.url
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
        aexm.igdl(url)
@@ -553,7 +553,7 @@ router.get('/download/instagram', async (req, res, next) => {
 router.get('/download/igstory', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.username
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
         if(listkey.includes(apikey)){
        aexm.igstory(url)
@@ -574,7 +574,7 @@ router.get('/download/igstory', async (req, res, next) => {
 router.get('/download/pinterest', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.q
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter q"})
         if(listkey.includes(apikey)){
        aexm.pinterest(q)
@@ -595,7 +595,7 @@ router.get('/download/pinterest', async (req, res, next) => {
 router.get('/download/tiktok', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.url
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
        aexm.ttdownloader(url)
@@ -616,7 +616,7 @@ router.get('/download/tiktok', async (req, res, next) => {
 router.get('/download/ytmp3', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.url
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
        aexm.youtube(url)
@@ -637,7 +637,7 @@ router.get('/download/ytmp3', async (req, res, next) => {
 router.get('/download/ytsearch', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://yutub-api-zaahirr.herokuapp.com/search?q=${url}`))
@@ -660,7 +660,7 @@ router.get('/download/ytsearch', async (req, res, next) => {
 router.get('/download/ytmp4', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.url
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
@@ -684,7 +684,7 @@ router.get('/download/ytmp4', async (req, res, next) => {
 router.get('/lk21/search', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.film
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter film"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/search?query=${url}`))
@@ -707,7 +707,7 @@ router.get('/lk21/search', async (req, res, next) => {
 router.get('/lk21/terbaru', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.film
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/newupload`))
         .then(response => response.json())
@@ -729,7 +729,7 @@ router.get('/lk21/terbaru', async (req, res, next) => {
 router.get('/lk21/comingsoon', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.film
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/comingsoon`))
         .then(response => response.json())
@@ -751,7 +751,7 @@ router.get('/lk21/comingsoon', async (req, res, next) => {
 router.get('/lk21/tvseries', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.film
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/tv`))
         .then(response => response.json())
@@ -773,7 +773,7 @@ router.get('/lk21/tvseries', async (req, res, next) => {
 router.get('/lk21/year', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.tahun
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter tahun"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/year?year=${url}`))
@@ -796,7 +796,7 @@ router.get('/lk21/year', async (req, res, next) => {
 router.get('/lk21/country', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.country
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter country"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/country?country=${url}`))
@@ -819,7 +819,7 @@ router.get('/lk21/country', async (req, res, next) => {
 router.get('/lk21/genre', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.tipe
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter tipe"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://lk21-api-zahirr.herokuapp.com/genre?genre=${url}`))
@@ -844,7 +844,7 @@ router.get('/lk21/genre', async (req, res, next) => {
 router.get('/filmapik/search', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.film
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter film"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://filmapik-api-zahirr.herokuapp.com/search?q=${url}`))
@@ -867,7 +867,7 @@ router.get('/filmapik/search', async (req, res, next) => {
 router.get('/filmapik/kategori', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.film
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter film"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://filmapik-api-zahirr.herokuapp.com/category?search=${film}`))
@@ -890,7 +890,7 @@ router.get('/filmapik/kategori', async (req, res, next) => {
 router.get('/filmapik/play', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.id
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter id"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://filmapik-api-zahirr.herokuapp.com/play?id=${url}`))
@@ -913,7 +913,7 @@ router.get('/filmapik/play', async (req, res, next) => {
 router.get('/filmapik/terbaru', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.id
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://filmapik-api-zahirr.herokuapp.com/latest`))
         .then(response => response.json())
@@ -937,7 +937,7 @@ router.get('/filmapik/terbaru', async (req, res, next) => {
 router.get('/news/cnn', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.type
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter type"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://news-api-zhirrr.vercel.app/v1/cnn-news/${url}`))
@@ -960,7 +960,7 @@ router.get('/news/cnn', async (req, res, next) => {
 router.get('/news/cnbc', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.type
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter type"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://news-api-zhirrr.vercel.app/v1/cnbc-news/${url}`))
@@ -983,7 +983,7 @@ router.get('/news/cnbc', async (req, res, next) => {
 router.get('/news/republika', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.type
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter type"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://news-api-zhirrr.vercel.app/v1/republika-news/${url}`))
@@ -1006,7 +1006,7 @@ router.get('/news/republika', async (req, res, next) => {
 router.get('/news/tempo', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.type
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter type"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://news-api-zhirrr.vercel.app/v1/tempo-news/${url}`))
@@ -1029,7 +1029,7 @@ router.get('/news/tempo', async (req, res, next) => {
 router.get('/news/antara', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.type
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter type"})      
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://news-api-zhirrr.vercel.app/v1/antara-news/${url}`))
@@ -1052,7 +1052,7 @@ router.get('/news/antara', async (req, res, next) => {
 router.get('/news/kumparan', async (req, res, next) => {
           var apikey = req.query.apikey
        	var url = req.query.type
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://news-api-zhirrr.vercel.app/v1/kumparan-news`))
         .then(response => response.json())
@@ -1076,7 +1076,7 @@ router.get('/news/kumparan', async (req, res, next) => {
 router.get('/photooxy/naruto', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1120,7 +1120,7 @@ router.get('/photooxy/naruto', async (req, res, next) => {
 router.get('/photooxy/grafity_text', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1164,7 +1164,7 @@ router.get('/photooxy/grafity_text', async (req, res, next) => {
 router.get('/photooxy/petterns', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1208,7 +1208,7 @@ router.get('/photooxy/petterns', async (req, res, next) => {
 router.get('/photooxy/text_on_cup', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1252,7 +1252,7 @@ router.get('/photooxy/text_on_cup', async (req, res, next) => {
 router.get('/photooxy/3d_summer', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1296,7 +1296,7 @@ router.get('/photooxy/3d_summer', async (req, res, next) => {
 router.get('/photooxy/3d_nature', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1340,7 +1340,7 @@ router.get('/photooxy/3d_nature', async (req, res, next) => {
 router.get('/photooxy/wolf_metal', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1384,7 +1384,7 @@ router.get('/photooxy/wolf_metal', async (req, res, next) => {
 router.get('/photooxy/wood_heart', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1428,7 +1428,7 @@ router.get('/photooxy/wood_heart', async (req, res, next) => {
 router.get('/photooxy/flower_heart', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1472,7 +1472,7 @@ router.get('/photooxy/flower_heart', async (req, res, next) => {
 router.get('/photooxy/wooden_board', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1517,7 +1517,7 @@ router.get('/photooxy/tiktok_effect', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
        var text2 = req.query.text2
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})      
          if(listkey.includes(apikey)){
@@ -1562,7 +1562,7 @@ router.get('/photooxy/tiktok_effect', async (req, res, next) => {
 router.get('/photooxy/double_heart', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1606,7 +1606,7 @@ router.get('/photooxy/double_heart', async (req, res, next) => {
 router.get('/photooxy/coffee_cup', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1650,7 +1650,7 @@ router.get('/photooxy/coffee_cup', async (req, res, next) => {
 router.get('/photooxy/under_grass', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1694,7 +1694,7 @@ router.get('/photooxy/under_grass', async (req, res, next) => {
 router.get('/photooxy/text_on_cup2', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1738,7 +1738,7 @@ router.get('/photooxy/text_on_cup2', async (req, res, next) => {
 router.get('/photooxy/romantic_text', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1782,7 +1782,7 @@ router.get('/photooxy/romantic_text', async (req, res, next) => {
 router.get('/photooxy/burn_paper', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1826,7 +1826,7 @@ router.get('/photooxy/burn_paper', async (req, res, next) => {
 router.get('/photooxy/shadow_text', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.text
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})      
          if(listkey.includes(apikey)){
        try {
@@ -1872,7 +1872,7 @@ router.get('/photooxy/shadow_text', async (req, res, next) => {
 router.get('/search/joox', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://arnz-api-production.up.railway.app/api/joox/search?q=${text}`))
@@ -1897,7 +1897,7 @@ router.get('/search/joox', async (req, res, next) => {
 router.get('/search/wallpaper', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        aexm.chara(text)
@@ -1918,7 +1918,7 @@ router.get('/search/wallpaper', async (req, res, next) => {
 router.get('/search/wattpad', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        aexm.wattpad(text)
@@ -1939,7 +1939,7 @@ router.get('/search/wattpad', async (req, res, next) => {
 router.get('/search/komiku', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        aexm.komiku(text)
@@ -1960,7 +1960,7 @@ router.get('/search/komiku', async (req, res, next) => {
 router.get('/search/otaku', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        aexm.otakudesu(text)
@@ -1981,7 +1981,7 @@ router.get('/search/otaku', async (req, res, next) => {
 router.get('/search/anime', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://arnz-api-production.up.railway.app/api/anime/search?q=${q}`))
@@ -2008,7 +2008,7 @@ router.get('/search/anime', async (req, res, next) => {
 router.get('/anime/searchanime', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://arnz-api-production.up.railway.app/api/anime/search?q=${q}`))
@@ -2033,7 +2033,7 @@ router.get('/anime/searchanime', async (req, res, next) => {
 router.get('/anime/samehadaku_genre', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.query
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://arnz-samehadaku.herokuapp.com/genre/${text}`))
@@ -2058,7 +2058,7 @@ router.get('/anime/samehadaku_genre', async (req, res, next) => {
 router.get('/anime/samehadaku_page', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://arnz-samehadaku.herokuapp.com/season`))
         .then(response => response.json())
@@ -2084,7 +2084,7 @@ router.get('/anime/samehadaku_page', async (req, res, next) => {
 router.get('/nsfw/ass', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/ass.json`))
         .then(response => response.json())
@@ -2107,7 +2107,7 @@ router.get('/nsfw/ass', async (req, res, next) => {
 router.get('/nsfw/ahegao', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/ahegao.json`))
         .then(response => response.json())
@@ -2130,7 +2130,7 @@ router.get('/nsfw/ahegao', async (req, res, next) => {
 router.get('/nsfw/bdsm', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/bdsm.json`))
         .then(response => response.json())
@@ -2153,7 +2153,7 @@ router.get('/nsfw/bdsm', async (req, res, next) => {
 router.get('/nsfw/blowjob', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/blowjob.json`))
         .then(response => response.json())
@@ -2176,7 +2176,7 @@ router.get('/nsfw/blowjob', async (req, res, next) => {
 router.get('/nsfw/cuckold', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/cuckold.json`))
         .then(response => response.json())
@@ -2199,7 +2199,7 @@ router.get('/nsfw/cuckold', async (req, res, next) => {
 router.get('/nsfw/cum', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/cum.json`))
         .then(response => response.json())
@@ -2222,7 +2222,7 @@ router.get('/nsfw/cum', async (req, res, next) => {
 router.get('/nsfw/ero', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/ero.json`))
         .then(response => response.json())
@@ -2245,7 +2245,7 @@ router.get('/nsfw/ero', async (req, res, next) => {
 router.get('/nsfw/femdom', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/femdom.json`))
         .then(response => response.json())
@@ -2268,7 +2268,7 @@ router.get('/nsfw/femdom', async (req, res, next) => {
 router.get('/nsfw/foot', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/foot.json`))
         .then(response => response.json())
@@ -2291,7 +2291,7 @@ router.get('/nsfw/foot', async (req, res, next) => {
 router.get('/nsfw/gangbang', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/gangbang.json`))
         .then(response => response.json())
@@ -2314,7 +2314,7 @@ router.get('/nsfw/gangbang', async (req, res, next) => {
 router.get('/nsfw/glasses', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/glasses.json`))
         .then(response => response.json())
@@ -2337,7 +2337,7 @@ router.get('/nsfw/glasses', async (req, res, next) => {
 router.get('/nsfw/hentai', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/hentai.json`))
         .then(response => response.json())
@@ -2360,7 +2360,7 @@ router.get('/nsfw/hentai', async (req, res, next) => {
 router.get('/nsfw/hentaigif', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/hnt_gifs.json`))
         .then(response => response.json())
@@ -2383,7 +2383,7 @@ router.get('/nsfw/hentaigif', async (req, res, next) => {
 router.get('/nsfw/jahy', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/jahy.json`))
         .then(response => response.json())
@@ -2406,7 +2406,7 @@ router.get('/nsfw/jahy', async (req, res, next) => {
 router.get('/nsfw/masturbation', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/masturbation.json`))
         .then(response => response.json())
@@ -2429,7 +2429,7 @@ router.get('/nsfw/masturbation', async (req, res, next) => {
 router.get('/nsfw/neko', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/nsfwNeko.json`))
         .then(response => response.json())
@@ -2452,7 +2452,7 @@ router.get('/nsfw/neko', async (req, res, next) => {
 router.get('/nsfw/orgy', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/orgy.json`))
         .then(response => response.json())
@@ -2475,7 +2475,7 @@ router.get('/nsfw/orgy', async (req, res, next) => {
 router.get('/nsfw/panties', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/panties.json`))
         .then(response => response.json())
@@ -2498,7 +2498,7 @@ router.get('/nsfw/panties', async (req, res, next) => {
 router.get('/nsfw/pussy', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/pussy.json`))
         .then(response => response.json())
@@ -2521,7 +2521,7 @@ router.get('/nsfw/pussy', async (req, res, next) => {
 router.get('/nsfw/thighs', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/thighs.json`))
         .then(response => response.json())
@@ -2544,7 +2544,7 @@ router.get('/nsfw/thighs', async (req, res, next) => {
 router.get('/nsfw/yuri', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/yuri.json`))
         .then(response => response.json())
@@ -2569,7 +2569,7 @@ router.get('/nsfw/yuri', async (req, res, next) => {
 router.get('/islam/tahlil', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataTahlil.json`))
         .then(response => response.json())
@@ -2590,7 +2590,7 @@ router.get('/islam/tahlil', async (req, res, next) => {
 router.get('/islam/wirid', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataWirid.json`))
         .then(response => response.json())
@@ -2611,7 +2611,7 @@ router.get('/islam/wirid', async (req, res, next) => {
 router.get('/islam/ayatkursi', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataAyatKursi.json`))
         .then(response => response.json())
@@ -2632,7 +2632,7 @@ router.get('/islam/ayatkursi', async (req, res, next) => {
 router.get('/islam/doaharian', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataDoaHarian.json`))
         .then(response => response.json())
@@ -2653,7 +2653,7 @@ router.get('/islam/doaharian', async (req, res, next) => {
 router.get('/islam/bacaanshalat', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataBacaanShalat.json`))
         .then(response => response.json())
@@ -2674,7 +2674,7 @@ router.get('/islam/bacaanshalat', async (req, res, next) => {
 router.get('/islam/niatshalat', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataNiatShalat.json`))
         .then(response => response.json())
@@ -2695,7 +2695,7 @@ router.get('/islam/niatshalat', async (req, res, next) => {
 router.get('/islam/kisahnabi', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataKisahNabi.json`))
         .then(response => response.json())
@@ -2716,7 +2716,7 @@ router.get('/islam/kisahnabi', async (req, res, next) => {
 router.get('/islam/asmaulhusna', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataAsmaulHusna.json`))
         .then(response => response.json())
@@ -2737,7 +2737,7 @@ router.get('/islam/asmaulhusna', async (req, res, next) => {
 router.get('/islam/niatsubuh', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatShubuh.json`))
         .then(response => response.json())
@@ -2758,7 +2758,7 @@ router.get('/islam/niatsubuh', async (req, res, next) => {
 router.get('/islam/niatzuhur', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatDzuhur.json`))
         .then(response => response.json())
@@ -2779,7 +2779,7 @@ router.get('/islam/niatzuhur', async (req, res, next) => {
 router.get('/islam/niatmagrib', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatMaghrib.json`))
         .then(response => response.json())
@@ -2800,7 +2800,7 @@ router.get('/islam/niatmagrib', async (req, res, next) => {
 router.get('/islam/niatisya', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatIsya.json`))
         .then(response => response.json())
@@ -2821,7 +2821,7 @@ router.get('/islam/niatisya', async (req, res, next) => {
 router.get('/islam/niatashar', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatAshar.json`))
         .then(response => response.json())
@@ -2844,7 +2844,7 @@ router.get('/islam/niatashar', async (req, res, next) => {
 router.get('/game/tebakgambar', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.page
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        aexm.tebakgambar()
 	.then(data => {
@@ -2866,7 +2866,7 @@ router.get('/game/tebakgambar', async (req, res, next) => {
 router.get('/other/ghstalk', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.username
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://github-api-zhirrr.vercel.app/api/detailuser?q=${text}`))
@@ -2889,7 +2889,7 @@ router.get('/other/ghstalk', async (req, res, next) => {
 router.get('/other/repostalk', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.username
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://github-api-zhirrr.vercel.app/api/searchrepo?q=${text}`))
@@ -2912,7 +2912,7 @@ router.get('/other/repostalk', async (req, res, next) => {
 router.get('/other/hilih', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://hilih-api-zhirrr.vercel.app/api/hilih?kata=${text}`))
@@ -2934,7 +2934,7 @@ router.get('/other/hilih', async (req, res, next) => {
 router.get('/other/fakedata', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.country
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter country"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://fakename-api-zhirrr.vercel.app/api/fakename?country=${text}`))
@@ -2956,7 +2956,7 @@ router.get('/other/fakedata', async (req, res, next) => {
 router.get('/other/drakorasi', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.search
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`http://docs-api-zahirrr.herokuapp.com/api/drakorasia?search=${text}`))
@@ -2978,7 +2978,7 @@ router.get('/other/drakorasi', async (req, res, next) => {
 router.get('/other/translate', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/translate?text=${text}`))
@@ -3000,7 +3000,7 @@ router.get('/other/translate', async (req, res, next) => {
 router.get('/other/infotsunami', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://bmkg-api-zahirr.herokuapp.com/api/tsunami`))
         .then(response => response.json())
@@ -3021,7 +3021,7 @@ router.get('/other/infotsunami', async (req, res, next) => {
 router.get('/other/infocuacadunia', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(listkey.includes(apikey)){
        fetch(encodeURI(`https://bmkg-api-zahirr.herokuapp.com/api/cuaca/dunia`))
         .then(response => response.json())
@@ -3042,7 +3042,7 @@ router.get('/other/infocuacadunia', async (req, res, next) => {
 router.get('/other/cuacabandara', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://bmkg-api-zahirr.herokuapp.com/api/cuaca/bandara`))
         .then(response => response.json())
@@ -3063,7 +3063,7 @@ router.get('/other/cuacabandara', async (req, res, next) => {
 router.get('/other/kodepos', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kota
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://kodepos-api-zhirrr.vercel.app/?q=${text}`))
@@ -3085,7 +3085,7 @@ router.get('/other/kodepos', async (req, res, next) => {
 router.get('/other/coviddunia', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://covid19-api-zhirrr.vercel.app/api/world`))
         .then(response => response.json())
@@ -3106,7 +3106,7 @@ router.get('/other/coviddunia', async (req, res, next) => {
 router.get('/other/covidindo', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://covid19-api-zhirrr.vercel.app/api/covid-indonesia`))
         .then(response => response.json())
@@ -3127,7 +3127,7 @@ router.get('/other/covidindo', async (req, res, next) => {
 router.get('/other/kbbi', async (req, res, next) => {
           var apikey = req.query.apikey
        	var text = req.query.kata
-       	if(!apikey) return res.sendFile(__path + '/docs/403.html')
+       	if(!Apikey) return res.json(loghandler.notapikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
         if(listkey.includes(apikey)){
        fetch(encodeURI(`https://kbbi-api-zhirrr.vercel.app/api/kbbi?text=${text}`))
