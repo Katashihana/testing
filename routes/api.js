@@ -97,11 +97,6 @@ loghandler = {
     	message: 'Forbiden, Invalid apikey, hubungi saya di whatsapp untuk mendapatkan apikey anda',
     	maintanied_by: `${creator}`
     },
-    invalidKey: {
-        status: false,
-        creator: `${creator}`,
-        code: 406,
-        message: 'apikey invalid chat owmer wa.me//6289626029135'
     noturl: {
     	status: false,
     	code: 403,
@@ -162,7 +157,7 @@ var len = 15
 
 router.get('/cekapikey', async (req, res, next) => {
 	var apikeyInput = req.query.apikey
-	if(!apikeyInput) return res.json(loghandler.invalidKey)
+	if(!apikeyInput) return res.sendFile(__path + '/docs/403.html')
 	a = await cekApiKey(apikeyInput)
 	if (a) {
 	json = JSON.stringify({
@@ -209,7 +204,7 @@ router.get('/cecan/china', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/cecan/vietnam', async (req, res, next) => {
@@ -230,7 +225,7 @@ router.get('/cecan/vietnam', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/cecan/thailand', async (req, res, next) => {
@@ -251,7 +246,7 @@ router.get('/cecan/thailand', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/cecan/indonesia', async (req, res, next) => {
@@ -272,7 +267,7 @@ router.get('/cecan/indonesia', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/cecan/korea', async (req, res, next) => {
@@ -293,7 +288,7 @@ router.get('/cecan/korea', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/cecan/japan', async (req, res, next) => {
@@ -314,7 +309,7 @@ router.get('/cecan/japan', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/cecan/malaysia', async (req, res, next) => {
@@ -337,7 +332,7 @@ router.get('/cecan/malaysia', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -360,7 +355,7 @@ router.get('/asupan/cecan', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/hijaber', async (req, res, next) => {
@@ -381,7 +376,7 @@ router.get('/asupan/hijaber', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/asupan', async (req, res, next) => {
@@ -402,7 +397,7 @@ router.get('/asupan/asupan', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/rikagusriani', async (req, res, next) => {
@@ -423,7 +418,7 @@ router.get('/asupan/rikagusriani', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/santuy', async (req, res, next) => {
@@ -444,7 +439,7 @@ router.get('/asupan/santuy', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/ukhty', async (req, res, next) => {
@@ -465,7 +460,7 @@ router.get('/asupan/ukhty', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/bocil', async (req, res, next) => {
@@ -486,7 +481,7 @@ router.get('/asupan/bocil', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/asupan/gheayubi', async (req, res, next) => {
@@ -507,7 +502,7 @@ router.get('/asupan/gheayubi', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -531,7 +526,7 @@ router.get('/download/facebook', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/instagram', async (req, res, next) => {
@@ -552,7 +547,7 @@ router.get('/download/instagram', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/igstory', async (req, res, next) => {
@@ -573,7 +568,7 @@ router.get('/download/igstory', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/pinterest', async (req, res, next) => {
@@ -594,7 +589,7 @@ router.get('/download/pinterest', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/tiktok', async (req, res, next) => {
@@ -615,7 +610,7 @@ router.get('/download/tiktok', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/ytmp3', async (req, res, next) => {
@@ -636,7 +631,7 @@ router.get('/download/ytmp3', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/ytsearch', async (req, res, next) => {
@@ -659,7 +654,7 @@ router.get('/download/ytsearch', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/download/ytmp4', async (req, res, next) => {
@@ -682,7 +677,7 @@ router.get('/download/ytmp4', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 //lk21
@@ -706,7 +701,7 @@ router.get('/lk21/search', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/lk21/terbaru', async (req, res, next) => {
@@ -728,7 +723,7 @@ router.get('/lk21/terbaru', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/lk21/comingsoon', async (req, res, next) => {
@@ -750,7 +745,7 @@ router.get('/lk21/comingsoon', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/lk21/tvseries', async (req, res, next) => {
@@ -772,7 +767,7 @@ router.get('/lk21/tvseries', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/lk21/year', async (req, res, next) => {
@@ -795,7 +790,7 @@ router.get('/lk21/year', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/lk21/country', async (req, res, next) => {
@@ -818,7 +813,7 @@ router.get('/lk21/country', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/lk21/genre', async (req, res, next) => {
@@ -841,7 +836,7 @@ router.get('/lk21/genre', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -866,7 +861,7 @@ router.get('/filmapik/search', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/filmapik/kategori', async (req, res, next) => {
@@ -889,7 +884,7 @@ router.get('/filmapik/kategori', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/filmapik/play', async (req, res, next) => {
@@ -912,7 +907,7 @@ router.get('/filmapik/play', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/filmapik/terbaru', async (req, res, next) => {
@@ -934,7 +929,7 @@ router.get('/filmapik/terbaru', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -959,7 +954,7 @@ router.get('/news/cnn', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/news/cnbc', async (req, res, next) => {
@@ -982,7 +977,7 @@ router.get('/news/cnbc', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/news/republika', async (req, res, next) => {
@@ -1005,7 +1000,7 @@ router.get('/news/republika', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/news/tempo', async (req, res, next) => {
@@ -1028,7 +1023,7 @@ router.get('/news/tempo', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/news/antara', async (req, res, next) => {
@@ -1051,7 +1046,7 @@ router.get('/news/antara', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/news/kumparan', async (req, res, next) => {
@@ -1073,7 +1068,7 @@ router.get('/news/kumparan', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -1119,7 +1114,7 @@ router.get('/photooxy/naruto', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/grafity_text', async (req, res, next) => {
@@ -1163,7 +1158,7 @@ router.get('/photooxy/grafity_text', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/petterns', async (req, res, next) => {
@@ -1207,7 +1202,7 @@ router.get('/photooxy/petterns', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/text_on_cup', async (req, res, next) => {
@@ -1251,7 +1246,7 @@ router.get('/photooxy/text_on_cup', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/3d_summer', async (req, res, next) => {
@@ -1295,7 +1290,7 @@ router.get('/photooxy/3d_summer', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/3d_nature', async (req, res, next) => {
@@ -1339,7 +1334,7 @@ router.get('/photooxy/3d_nature', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/wolf_metal', async (req, res, next) => {
@@ -1383,7 +1378,7 @@ router.get('/photooxy/wolf_metal', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/wood_heart', async (req, res, next) => {
@@ -1427,7 +1422,7 @@ router.get('/photooxy/wood_heart', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/flower_heart', async (req, res, next) => {
@@ -1471,7 +1466,7 @@ router.get('/photooxy/flower_heart', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/wooden_board', async (req, res, next) => {
@@ -1515,7 +1510,7 @@ router.get('/photooxy/wooden_board', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/tiktok_effect', async (req, res, next) => {
@@ -1561,7 +1556,7 @@ router.get('/photooxy/tiktok_effect', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/double_heart', async (req, res, next) => {
@@ -1605,7 +1600,7 @@ router.get('/photooxy/double_heart', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/coffee_cup', async (req, res, next) => {
@@ -1649,7 +1644,7 @@ router.get('/photooxy/coffee_cup', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/under_grass', async (req, res, next) => {
@@ -1693,7 +1688,7 @@ router.get('/photooxy/under_grass', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/text_on_cup2', async (req, res, next) => {
@@ -1737,7 +1732,7 @@ router.get('/photooxy/text_on_cup2', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/romantic_text', async (req, res, next) => {
@@ -1781,7 +1776,7 @@ router.get('/photooxy/romantic_text', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/burn_paper', async (req, res, next) => {
@@ -1825,7 +1820,7 @@ router.get('/photooxy/burn_paper', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/photooxy/shadow_text', async (req, res, next) => {
@@ -1869,7 +1864,7 @@ router.get('/photooxy/shadow_text', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 }
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -1896,7 +1891,7 @@ router.get('/search/joox', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/search/wallpaper', async (req, res, next) => {
@@ -1917,7 +1912,7 @@ router.get('/search/wallpaper', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/search/wattpad', async (req, res, next) => {
@@ -1938,7 +1933,7 @@ router.get('/search/wattpad', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/search/komiku', async (req, res, next) => {
@@ -1959,7 +1954,7 @@ router.get('/search/komiku', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/search/otaku', async (req, res, next) => {
@@ -1980,7 +1975,7 @@ router.get('/search/otaku', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/search/anime', async (req, res, next) => {
@@ -2005,7 +2000,7 @@ router.get('/search/anime', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -2032,7 +2027,7 @@ router.get('/anime/searchanime', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/anime/samehadaku_genre', async (req, res, next) => {
@@ -2057,7 +2052,7 @@ router.get('/anime/samehadaku_genre', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/anime/samehadaku_page', async (req, res, next) => {
@@ -2081,7 +2076,7 @@ router.get('/anime/samehadaku_page', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -2106,7 +2101,7 @@ router.get('/nsfw/ass', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/ahegao', async (req, res, next) => {
@@ -2129,7 +2124,7 @@ router.get('/nsfw/ahegao', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/bdsm', async (req, res, next) => {
@@ -2152,7 +2147,7 @@ router.get('/nsfw/bdsm', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/blowjob', async (req, res, next) => {
@@ -2175,7 +2170,7 @@ router.get('/nsfw/blowjob', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/cuckold', async (req, res, next) => {
@@ -2198,7 +2193,7 @@ router.get('/nsfw/cuckold', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/cum', async (req, res, next) => {
@@ -2221,7 +2216,7 @@ router.get('/nsfw/cum', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/ero', async (req, res, next) => {
@@ -2244,7 +2239,7 @@ router.get('/nsfw/ero', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/femdom', async (req, res, next) => {
@@ -2267,7 +2262,7 @@ router.get('/nsfw/femdom', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/foot', async (req, res, next) => {
@@ -2290,7 +2285,7 @@ router.get('/nsfw/foot', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/gangbang', async (req, res, next) => {
@@ -2313,7 +2308,7 @@ router.get('/nsfw/gangbang', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/glasses', async (req, res, next) => {
@@ -2336,7 +2331,7 @@ router.get('/nsfw/glasses', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/hentai', async (req, res, next) => {
@@ -2359,7 +2354,7 @@ router.get('/nsfw/hentai', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/hentaigif', async (req, res, next) => {
@@ -2382,7 +2377,7 @@ router.get('/nsfw/hentaigif', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/jahy', async (req, res, next) => {
@@ -2405,7 +2400,7 @@ router.get('/nsfw/jahy', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/masturbation', async (req, res, next) => {
@@ -2428,7 +2423,7 @@ router.get('/nsfw/masturbation', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/neko', async (req, res, next) => {
@@ -2451,7 +2446,7 @@ router.get('/nsfw/neko', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/orgy', async (req, res, next) => {
@@ -2474,7 +2469,7 @@ router.get('/nsfw/orgy', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/panties', async (req, res, next) => {
@@ -2497,7 +2492,7 @@ router.get('/nsfw/panties', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/pussy', async (req, res, next) => {
@@ -2520,7 +2515,7 @@ router.get('/nsfw/pussy', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/thighs', async (req, res, next) => {
@@ -2543,7 +2538,7 @@ router.get('/nsfw/thighs', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/nsfw/yuri', async (req, res, next) => {
@@ -2566,7 +2561,7 @@ router.get('/nsfw/yuri', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -2589,7 +2584,7 @@ router.get('/islam/tahlil', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/wirid', async (req, res, next) => {
@@ -2610,7 +2605,7 @@ router.get('/islam/wirid', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/ayatkursi', async (req, res, next) => {
@@ -2631,7 +2626,7 @@ router.get('/islam/ayatkursi', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/doaharian', async (req, res, next) => {
@@ -2652,7 +2647,7 @@ router.get('/islam/doaharian', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/bacaanshalat', async (req, res, next) => {
@@ -2673,7 +2668,7 @@ router.get('/islam/bacaanshalat', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/niatshalat', async (req, res, next) => {
@@ -2694,7 +2689,7 @@ router.get('/islam/niatshalat', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/kisahnabi', async (req, res, next) => {
@@ -2715,7 +2710,7 @@ router.get('/islam/kisahnabi', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/asmaulhusna', async (req, res, next) => {
@@ -2736,7 +2731,7 @@ router.get('/islam/asmaulhusna', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/niatsubuh', async (req, res, next) => {
@@ -2757,7 +2752,7 @@ router.get('/islam/niatsubuh', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/niatzuhur', async (req, res, next) => {
@@ -2778,7 +2773,7 @@ router.get('/islam/niatzuhur', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/niatmagrib', async (req, res, next) => {
@@ -2799,7 +2794,7 @@ router.get('/islam/niatmagrib', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/niatisya', async (req, res, next) => {
@@ -2820,7 +2815,7 @@ router.get('/islam/niatisya', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/islam/niatashar', async (req, res, next) => {
@@ -2841,7 +2836,7 @@ router.get('/islam/niatashar', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -2863,7 +2858,7 @@ router.get('/game/tebakgambar', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
@@ -2888,7 +2883,7 @@ router.get('/other/ghstalk', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/repostalk', async (req, res, next) => {
@@ -2911,7 +2906,7 @@ router.get('/other/repostalk', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/hilih', async (req, res, next) => {
@@ -2933,7 +2928,7 @@ router.get('/other/hilih', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/fakedata', async (req, res, next) => {
@@ -2955,7 +2950,7 @@ router.get('/other/fakedata', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/drakorasi', async (req, res, next) => {
@@ -2977,7 +2972,7 @@ router.get('/other/drakorasi', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/translate', async (req, res, next) => {
@@ -2999,7 +2994,7 @@ router.get('/other/translate', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/infotsunami', async (req, res, next) => {
@@ -3020,7 +3015,7 @@ router.get('/other/infotsunami', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/infocuacadunia', async (req, res, next) => {
@@ -3041,7 +3036,7 @@ router.get('/other/infocuacadunia', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/cuacabandara', async (req, res, next) => {
@@ -3062,7 +3057,7 @@ router.get('/other/cuacabandara', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/kodepos', async (req, res, next) => {
@@ -3084,7 +3079,7 @@ router.get('/other/kodepos', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/coviddunia', async (req, res, next) => {
@@ -3105,7 +3100,7 @@ router.get('/other/coviddunia', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/covidindo', async (req, res, next) => {
@@ -3126,7 +3121,7 @@ router.get('/other/covidindo', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 router.get('/other/kbbi', async (req, res, next) => {
@@ -3148,7 +3143,7 @@ router.get('/other/kbbi', async (req, res, next) => {
          	res.sendFile(__path + '/docs/503.html')
 })
 } else {
-  res.json(loghandler.invalidKey)
+  res.sendFile(__path + '/docs/403.html')
 }
 })
 
